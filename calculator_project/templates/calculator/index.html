@@ -1,0 +1,49 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Calculator</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <main class="calculator-app">
+    <div class="display" id="display">0</div>
+
+    <div class="buttons-grid" id="buttons">
+      <!-- row 1 -->
+      <button class="btn btn-op" data-value="(">(</button>
+      <button class="btn btn-op" data-value=")">)</button>
+      <button class="btn btn-clear" id="back">⌫</button>
+      <button class="btn btn-clear" id="clear">C</button>
+
+      <!-- row 2 -->
+      <button class="btn" data-value="7">7</button>
+      <button class="btn" data-value="8">8</button>
+      <button class="btn" data-value="9">9</button>
+      <button class="btn btn-op" data-value="/">÷</button>
+
+      <!-- row 3 -->
+      <button class="btn" data-value="4">4</button>
+      <button class="btn" data-value="5">5</button>
+      <button class="btn" data-value="6">6</button>
+      <button class="btn btn-op" data-value="*">×</button>
+
+      <!-- row 4 -->
+      <button class="btn" data-value="1">1</button>
+      <button class="btn" data-value="2">2</button>
+      <button class="btn" data-value="3">3</button>
+      <button class="btn btn-op" data-value="-">−</button>
+
+      <!-- row 5 -->
+      <button class="btn zero" data-value="0">0</button>
+      <button class="btn" data-value=".">.</button>
+      <button class="btn btn-eq" id="equals">=</button>
+      <button class="btn btn-op" data-value="+">+</button>
+    </div>
+  </main>
+
+  <script src="{% static 'js/calculator.js' %}"></script>
+</body>
+</html>
